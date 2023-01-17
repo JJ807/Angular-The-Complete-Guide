@@ -10,6 +10,8 @@ export class AppComponent {
     { type: 'server', name: 'Testserver', content: 'Just a test!' },
   ];
 
+  events = [];
+
   onServerAdded(serverData: { serverName: string; serverContent: string }) {
     this.serverElements.push({
       type: 'server',
@@ -32,5 +34,16 @@ export class AppComponent {
 
   onDestroyFirst() {
     this.serverElements.splice(0, 1);
+  }
+
+  assignEventsValue(event: any) {
+    console.log(event);
+    this.events = event;
+    console.log('this.events = ', this.events);
+  }
+
+  ngIf(eventOrdinal: number) {
+    console.log('eventOrdinal: ', eventOrdinal);
+    return eventOrdinal % 2 == 0;
   }
 }

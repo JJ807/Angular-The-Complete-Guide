@@ -28,3 +28,20 @@
     </div>
   </div>
 </div>
+<hr />
+<div class="container">
+  <h2>Assignment</h2> 
+  <div class="row">
+    <app-game-control (numberEmitter)="assignEventsValue($event)"></app-game-control>
+    <div *ngFor="let event of this.events;" class="col-xs-12">
+        <ng-container *ngIf="ngIf(event); else odd">
+          <app-even [number]="event"></app-even>
+        </ng-container>
+        <ng-template #odd>
+          <app-odd [number]="event"></app-odd>
+        </ng-template>
+    </div>
+  </div>
+</div>
+
+
