@@ -11,9 +11,12 @@ import {
   selector: '[appDropdown]',
 })
 export class DropdownDirective {
+
+    constructor(private elRef: ElementRef){}
+
   @HostBinding('class.open') isOpen = false;
 
-  @HostListener('click') toggleDropdown() {
-    this.isOpen = !this.isOpen;
+  @HostListener('document:click', ['$event']) toggleDropdown(event: Event) {
+    this.isOpen = this.elRef.nativeElement.contains(event.target) ? !this.isOpen : false;
   }
 }
