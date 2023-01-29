@@ -1,0 +1,9 @@
+<button class="btn btn-primary" (click)="toggleParagraphDisplay()">Display Details</button>
+<p *ngIf="paragraphDisplayed">Secret Password = tuna</p>
+<p
+  *ngFor="let btnClick of buttonClickLogs; let i=index"
+  [ngStyle]="{ backgroundColor: getColor(i+1) }"
+  [ngClass]="{ whiteColor: isLengthConditionMet(i+1) }"
+>
+  {{ btnClick }}
+</p>

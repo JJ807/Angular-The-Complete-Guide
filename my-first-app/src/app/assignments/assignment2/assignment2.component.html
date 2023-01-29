@@ -1,0 +1,15 @@
+<h2>assignment no. 2 - for data-binding</h2>
+<div class="container">
+  <div class="col-xs-12">
+    <label>Username</label>
+    <input type="text" class="form-control" [(ngModel)]="username" />
+    <p>{{ username }}</p>
+    <button
+      class="btn btn-secondary"
+      [disabled]="!username"
+      (click)="onButtonClick()"
+    >
+      Reset username
+    </button>
+  </div>
+</div>
