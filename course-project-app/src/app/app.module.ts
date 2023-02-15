@@ -27,14 +27,10 @@ import { RecipeEditComponent } from './feature/recipe-book/recipe-edit/recipe-ed
     RecipesComponent,
     DropdownDirective,
     RecipeStartComponent,
-    RecipeEditComponent
+    RecipeEditComponent,
   ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, FormsModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
