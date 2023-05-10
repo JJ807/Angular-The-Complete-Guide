@@ -11,6 +11,6 @@ export class AppComponent {
 
   onSubmit(f: any) {
     console.log(f.controls);
-    console.log('test');
+    console.log('test2');
   }
 }
